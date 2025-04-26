@@ -98,17 +98,21 @@
 
 body {
   background: antiquewhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   max-width: 350px;
-  max-height: 800px;
   background: white;
   border-radius: 8px;
-  margin: 80px 12px 160px 12px;
   overflow: hidden;
+  margin: 1rem;
 }
 
 .responsive-image {
@@ -116,6 +120,10 @@ body {
   height: 300px;
   background-size: cover;
   background-image: url("./images/image-product-mobile.jpg");
+}
+
+.cart-image{
+  margin-right: 0.5rem;
 }
 
 .container-price {
@@ -130,11 +138,32 @@ body {
 
 @media (min-width: 768px) {
   .responsive-image {
+    min-width: 300px;
+    height: 100%;
+    background-size: cover;
     background-image: url("./images/image-product-desktop.jpg");
+  }
+
+  body {
+    background: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
   }
 
   .container {
     display: flex;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+  align-items: center
   }
+
+  .container-info {
+  }
+  
 }
